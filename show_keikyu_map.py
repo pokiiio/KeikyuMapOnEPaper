@@ -9,7 +9,8 @@ E_PAPER_WIDTH = 264
 E_PAPER_HEIGHT = 176
 
 LEFT_COLUMN_WIDTH = 116
-HEADER_HEIGHT = 30
+HEADER_HEIGHT = 42
+TITLE_HEIGHT = 42
 
 
 def show_image(black_image, red_image):
@@ -37,6 +38,9 @@ if __name__ == '__main__':
 
     image_red.paste(ImageOps.invert(text_to_image.text_to_image(
         LEFT_COLUMN_WIDTH, HEADER_HEIGHT, u"京急線", 24)), (0, 0))
+
+    image_red.paste(text_to_image.text_to_image(
+        LEFT_COLUMN_WIDTH, TITLE_HEIGHT, u"運転見合わせ", 16), (0, HEADER_HEIGHT))
 
     show_image(image_black.rotate(90, expand=True),
                image_red.rotate(90, expand=True))
