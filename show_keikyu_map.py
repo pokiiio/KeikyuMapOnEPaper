@@ -20,9 +20,18 @@ def show_image(black_image, red_image):
 
 
 if __name__ == '__main__':
-    image_black = Image.open("image/map_full.png")
 
-    image_red = Image.open("image/map_main-line.png")
+    image_black = Image.new(
+        "RGB", (E_PAPER_WIDTH, E_PAPER_HEIGHT), (255, 255, 255))
+
+    image_black_temp = Image.open("./image/map_full.png")
+    image_black.paste(image_black_temp, mask=image_black_temp)
+
+    image_red = Image.new(
+        "RGB", (E_PAPER_WIDTH, E_PAPER_HEIGHT), (255, 255, 255))
+
+    image_red_temp = Image.open("./image/map_main-line.png")
+    image_red.paste(image_black_temp, mask=image_red_temp)
 
     show_image(image_black.rotate(90, expand=True),
                image_red.rotate(90, expand=True))
