@@ -44,7 +44,7 @@ if __name__ == '__main__':
         LEFT_COLUMN_WIDTH, TITLE_HEIGHT, u"運転見合わせ", 16), (0, HEADER_HEIGHT))
 
     image_black.paste(text_to_image.text_to_image(
-        LEFT_COLUMN_WIDTH, TITLE_HEIGHT, u"八丁畷駅で発生した人身事故のため京急川崎駅〜神奈川新町駅間の上下線の運転を見合わせています。", 14), (0, HEADER_HEIGHT + TITLE_HEIGHT))
+        LEFT_COLUMN_WIDTH, DETAIL_HEIGHT, u"八丁畷駅で発生した人身事故のため京急川崎駅〜神奈川新町駅間の上下線の運転を見合わせています。", 14), (0, HEADER_HEIGHT + TITLE_HEIGHT))
 
     show_image(image_black.rotate(90, expand=True),
                image_red.rotate(90, expand=True))
