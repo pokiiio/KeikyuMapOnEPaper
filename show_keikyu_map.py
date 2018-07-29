@@ -4,6 +4,7 @@ import sys
 import numpy
 import epd2in7b
 import text_to_image
+from os import path
 from PIL import Image, ImageOps, ImageFont, ImageDraw
 
 E_PAPER_WIDTH = 264
@@ -32,13 +33,17 @@ ZUSHI_LINE_STATIONS = [u"逗子線", u"六浦", u"神武寺", u"新逗子"]
 KURIHAMA_LINE_STATIONS = [u"久里浜線", u"新大津", u"北久里浜", u"京急久里浜",
                           u"YRP野比", u"京急長沢", u"津久井浜", u"三浦海岸", u"三崎口"]
 
-IMAGE_MAIN = "./image/map_main-line.png"
-IMAGE_AIRPORT = "./image/map_airport-line.png"
-IMAGE_DAISHI = "./image/map_daishi-line.png"
-IMAGE_ZUSHI = "./image/map_zushi-line.png"
-IMAGE_KURIHAMA = "./image/map_kurihama-line.png"
-IMAGE_FULL = "./image/map_full.png"
-IMAGE_LEGEND = "./image/map_legend.png"
+IMAGE_MAIN = path.dirname(path.abspath(__file__)) + "/image/map_main-line.png"
+IMAGE_AIRPORT = path.dirname(path.abspath(
+    __file__)) + "/image/map_airport-line.png"
+IMAGE_DAISHI = path.dirname(path.abspath(__file__)) + \
+    "/image/map_daishi-line.png"
+IMAGE_ZUSHI = path.dirname(path.abspath(__file__)) + \
+    "/image/map_zushi-line.png"
+IMAGE_KURIHAMA = path.dirname(path.abspath(
+    __file__)) + "/image/map_kurihama-line.png"
+IMAGE_FULL = path.dirname(path.abspath(__file__)) + "/image/map_full.png"
+IMAGE_LEGEND = path.dirname(path.abspath(__file__)) + "/image/map_legend.png"
 
 
 def show_image(black_image, red_image):
