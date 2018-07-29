@@ -27,6 +27,7 @@ IMAGE_DAISHI = "./image/map_daishi-line.png"
 IMAGE_ZUSHI = "./image/map_zushi-line.png"
 IMAGE_KURIHAMA = "./image/map_kurihama-line.png"
 IMAGE_FULL = "./image/map_full.png"
+IMAGE_LEGEND = "./image/map_main-legend.png"
 
 
 def show_image(black_image, red_image):
@@ -49,6 +50,9 @@ if __name__ == '__main__':
 
     image_black_temp = Image.open(IMAGE_FULL)
     image_black.paste(image_black_temp, mask=image_black_temp)
+
+    image_red_temp = Image.open(IMAGE_LEGEND)
+    image_red.paste(image_black_temp, mask=image_red_temp)
 
     for line in highlightLine:
         if line == AIRPORT:
