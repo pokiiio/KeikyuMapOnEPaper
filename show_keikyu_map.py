@@ -27,7 +27,7 @@ IMAGE_DAISHI = "./image/map_daishi-line.png"
 IMAGE_ZUSHI = "./image/map_zushi-line.png"
 IMAGE_KURIHAMA = "./image/map_kurihama-line.png"
 IMAGE_FULL = "./image/map_full.png"
-IMAGE_LEGEND = "./image/map_main-legend.png"
+IMAGE_LEGEND = "./image/map_legend.png"
 
 
 def show_image(black_image, red_image):
