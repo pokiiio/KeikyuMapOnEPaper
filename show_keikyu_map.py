@@ -50,6 +50,22 @@ def show_image(black_image, red_image):
     epd.display_frame(frame_black, frame_red)
 
 
+def get_title(text):
+    if text.find(u"平常") > -1:
+        return u"平常運転"
+
+    if text.find(u"見合わせ"):
+        return u"運転見合わせ"
+
+    if text.find(u"遅れ") or text.find(u"乱れ"):
+        return u"遅延"
+
+    if text.find(u"運休"):
+        return u"運休"
+
+    return u"運行情報あり"
+
+
 def get_highlited_lines(text):
     if text.find(ALL_LINES) > -1:
         return [MAIN, AIRPORT, DAISHI, ZUSHI, KURIHAMA]
@@ -87,6 +103,11 @@ if __name__ == '__main__':
 
     title = u"調整中"
     detail = u"データ取得中…"
+
+    if len(sys.argv) == 2:
+        detail = unicode(sys.argv[1], 'utf-8')
+        title = get_title(detail)
+
     highlightLine = get_highlited_lines(detail)
 
     image_black = Image.new("RGB", (E_PAPER_WIDTH, E_PAPER_HEIGHT), WHITE)
