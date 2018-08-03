@@ -59,13 +59,13 @@ def get_title(text):
     if text.find(u"平常") > -1:
         return u"平常運転"
 
-    if text.find(u"見合わせ"):
+    if text.find(u"見合わせ") > -1:
         return u"運転見合わせ"
 
-    if text.find(u"遅れ") or text.find(u"乱れ"):
+    if text.find(u"遅れ") > -1 or text.find(u"乱れ") > -1:
         return u"遅延"
 
-    if text.find(u"運休"):
+    if text.find(u"運休") > -1:
         return u"運休"
 
     return u"運行情報あり"
