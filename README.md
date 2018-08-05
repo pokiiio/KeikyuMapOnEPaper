@@ -24,7 +24,7 @@ python path/to/show_keikyu_map.py "(京急運行情報文字列)"
 + 引数で与えられた文字列から、遅れてる路線と、遅れの具合を解析。
 + PythonのPILで、遅れてる路線をハイライトした路線図と、タイトル・運行情報を文字列で表示したPNG画像を作成。
 + Wavashareのライブラリで電子ペーパーに描画。
-+ フォントは毎度おなじみのM+ FONTS （https://mplus-fonts.osdn.jp/）を使わせていただいております。ありがとうございます。
++ フォントは毎度おなじみのM+ FONTS [（https://mplus-fonts.osdn.jp/）](https://mplus-fonts.osdn.jp/)を使わせていただいております。ありがとうございます。
 
 
 ## 備考
