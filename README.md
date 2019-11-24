@@ -1,7 +1,3 @@
-***京急の運行情報ページに変更があったため、現在このライブラリは利用できません***
-***近日中に対応予定です***
-
-
 ![pokiiio KeikyuMapOnEPaper](https://lh3.googleusercontent.com/gAKy1D9X09dkf0msIxjfWhUhc_mro92Mvdzg_1zPmXx7KBc1gDK3d4RtEdrPdQFfzk0V3V-ROmOCkrqHy3U-2bC2_y9ZP8ezwYdJZB4WeXm9oIsTMDAIpwpOgy9X5kDGB6bv2YfSYfU=s600 "pokiiio KeikyuMapOnEPaper")
 
 # KeikyuMapOnEPaper
